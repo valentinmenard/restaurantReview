@@ -1,0 +1,12 @@
+h2 List of the restaurants
+
+ul
+  - @restaurants.each do |restaurant|
+    li
+      => link_to restaurant.name, restaurant_path(restaurant)
+
+h2 = link_to "add a restaurant", new_restaurant_path
+
+
+
+
