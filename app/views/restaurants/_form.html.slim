@@ -1,12 +1,6 @@
-ul
-  = simple_form_for(@restaurant) do |form|
-    li
-      = form.input :name
-    li
-      = form.input :address
-    li
-      = form.input :phone_number
-    li
-      = form.select :category, ["chinese", "italian", "japanese", "french", "belgian"]
-    li
-      = form.submit "I'm done", class: "btn btn-primary"
+= simple_form_for(@restaurant) do |form|
+  = form.input :name
+  = form.input :address
+  = form.input :phone_number
+  = form.select :category, ["chinese", "italian", "japanese", "french", "belgian"]
+  = form.submit "I'm done", class: "btn btn-primary"
