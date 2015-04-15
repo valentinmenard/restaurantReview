@@ -10,7 +10,16 @@
 </head>
 <body>
   <%= render 'layouts/navbar' %>
+
   <div class="padded">
+<!--     <% if flash[:alert] %>
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <%= flash[:alert] %>
+        </div>
+      </div>
+    <% end %> -->
+
     <%= yield %>
   </div>
 

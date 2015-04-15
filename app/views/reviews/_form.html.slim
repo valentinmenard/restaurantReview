@@ -1,8 +1,4 @@
-ul
-  = simple_form_for [@restaurant, @review] do |form|
-    li
-      = form.input :content
-    li
-      = form.input :rating
-    li
-      = form.submit "I'm done"
+= simple_form_for [@restaurant, @review] do |form|
+  = form.input :content
+  = form.input :rating
+  = form.submit "I'm done", class: "btn btn-primary"

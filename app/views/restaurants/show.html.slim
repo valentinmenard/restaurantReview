@@ -1,7 +1,12 @@
-h2 = @restaurant.name
+.content.text-center
+  h2 = @restaurant.name
 
-h3 = @restaurant.category
-h4 = @restaurant.address
-h4 = @restaurant.phone_number
+  h3 = @restaurant.category
+  h4 = @restaurant.address
+  h4 = @restaurant.phone_number
 
-p = link_to "add a review", new_restaurant_review_path(@restaurant)
+.row
+  .col-xs-4
+  .col-xs-4
+    = render "reviews/form"
+  .col-xs-4

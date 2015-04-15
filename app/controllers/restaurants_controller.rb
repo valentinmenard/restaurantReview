@@ -13,11 +13,13 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       redirect_to restaurant_path(@restaurant)
     else
+      flash[:alert] = "Unable to add your restaurant"
       render :new
     end
   end
 
   def show
+    @review = Review.new
     @restaurant = Restaurant.find(params[:id])
   end
 
